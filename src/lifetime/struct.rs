@@ -36,6 +36,6 @@ mod tests {
         // but can't drop msg
         drop(s);
         // drop(msg);
-        assert_eq!(result, "");
+        assert_eq!(result, "msg");
     }
 }
