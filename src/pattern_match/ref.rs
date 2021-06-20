@@ -17,11 +17,13 @@ fn ref_mut2(mut s: Option<&str>) -> Option<&str> {
     s
 }
 
-fn ref_mut3(mut s: Option<&str>) -> Option<&str> {
+fn ref_mut3(s: Option<&str>) -> Option<&str> {
     // s_ref: &str
     // s_ref is copy of Value of s
     let mut s2 = s?;
+    let _ = s2; // remove warning
     s2 = &"";
+    let _ = s2; // remove warning
     s
 }
 
